@@ -6,7 +6,7 @@ int _printf(const char *format, ...);
 struct input
 {
 	char *symbols;
-	int (*f)(int,int);
+	int (*f)(va_list);
 }
 
 #endif
