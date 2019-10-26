@@ -36,21 +36,6 @@ int print_string(va_list)
 
 int _printf(const char *format, ...)
 {
-<<<<<<< HEAD
-	char * byte;
-
-	byte = _strelen(format);
-
-	Printf("Hello there!", format);
-	return (byte);
-=======
-
-
 	Printf("Hello there!");
 	return (0);
-
-
-
-
->>>>>>> 9b58cc12139b12d163b6de7567900baa3ec630b0
 }
