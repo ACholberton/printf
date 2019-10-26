@@ -1,3 +1,22 @@
+#include "holberton.h"
+/**
+ *_strlen - this function returns the lenght of  string
+ *@s: is a string
+ *Return: lenght
+ */
+int _strlen(char *s)
+{
+	int l;
+
+	l = 0;
+
+	while (*s)
+	{
+		s++;
+		l++;
+	}
+	return (l);
+}
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
@@ -8,6 +27,10 @@
  */
 int _printf(const char *format, ...)
 {
-	Printf("Hello there!");
-	return (0);
+	char * byte;
+
+	byte = _strelen(format);
+
+	Printf("Hello there!", format);
+	return (byte);
 }
