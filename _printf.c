@@ -8,5 +8,13 @@
  */
 int _printf(const char *format, ...)
 {
+	if (format == NULL)
+	{
+		return;
+	}
+	else
+	{
+		printf("%s/n", format);
+	}
 	return (0);
 }
