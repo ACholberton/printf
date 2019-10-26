@@ -25,12 +25,32 @@ int _strlen(char *s)
  *@format: will be the imput entered into the function
  *Return: the number of characters printed
  */
+
+int print_string(va_list)
+{
+	char str;
+	str = va_arg(ap, char *);
+        putchar2(str);
+}
+
+
 int _printf(const char *format, ...)
 {
+<<<<<<< HEAD
 	char * byte;
 
 	byte = _strelen(format);
 
 	Printf("Hello there!", format);
 	return (byte);
+=======
+
+
+	Printf("Hello there!");
+	return (0);
+
+
+
+
+>>>>>>> 9b58cc12139b12d163b6de7567900baa3ec630b0
 }
