@@ -8,5 +8,6 @@
  */
 int _printf(const char *format, ...)
 {
+	Printf("Hello there!");
 	return (0);
 }
