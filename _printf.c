@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 			{
 				j = 0;
                         /* while my structure array is not null   */
-				while (opts[j].p != NULL)
+				while (opts[j].f != NULL)
 				{
 /* k is our counter for going thru pointers to format*/
 /* trying to say that if the letter matches format, give the associated function */
@@ -44,6 +44,7 @@ int _printf(const char *format, ...)
 						on = 1;
 						i++;
 					}
+					j++;
 /* if flag is not on, just print stuff like "hello" */
 					if (on == 0)
 					{
