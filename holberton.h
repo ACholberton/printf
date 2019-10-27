@@ -6,11 +6,13 @@ int _printf(const char *format, ...);
 int _strlen(char *s);
 
 int print_string(va_list);
+int print_char(va_list);
+int print_percent(va_list);
 
-struct input
+typedef struct options
 {
-	char *symbols;
+	char *p;
 	int (*f)(va_list);
-}
+} print_t;
 
 #endif
