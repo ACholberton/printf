@@ -8,9 +8,19 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0;
+	va_list arg;
+	int i, j = 0;
+	int printedchar = 0;
+/* this is our flag, if something is 1, we do something. otherwise no */
+	int on = 0;
 
-	if (format != %)
-		putchar2(format[i++]);
-	if (format == %)
+	print_t opts[] = {
+		{"c", print_char},
+		{"s", print_string},
+		{NULL, NULL}
+	};
+
+	va_start(arg, format);
+
+
 }
