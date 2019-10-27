@@ -64,5 +64,5 @@ int print_int(va_list arg)
 		rev /= 10;
 	}
 	putchar(LD);
-	return (1);
+	return (num);
 }
