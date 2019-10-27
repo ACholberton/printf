@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 {
 	va_list arg;
 	int i, j = 0;
-	int printedchar = 0;
+	char printedchar = 0;
 	int on = 0;
 
 	print_t opts[] = {
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 				j = 0;
 				while (opts[j].f != NULL)
 				{
-					if (format[i+1] == opts[j].p[0])
+					if (format[i+1] == opts[j].p[j])
 					{
 						printedchar += opts[j].f(arg);
 						on = 1;
