@@ -22,8 +22,9 @@ int print_string(va_list arg)
 /* we hope this works */
 /*andres, i am taking out the write */
 /*		write(1, "(nil)", 5);   */
-		putchar2('\n');
+		s = "(nil)";
 	}
+	i = 0;
 	while (s[i] != '\0')
 	{
 		putchar2(s[i]);
