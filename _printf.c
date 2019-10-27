@@ -24,7 +24,6 @@ int _printf(const char *format, ...)
 
 	va_start(arg, format);
 
-
 	while (format != NULL && format[i] != '\0')
 	{
                  /* if format looks something like %c or %s */
@@ -40,31 +39,34 @@ int _printf(const char *format, ...)
 					if (format[i+1] == opts[j].p[0])
 					{
                                             /* flag is on */
-						on = 1;
 /* try to call the matching and associated function in our structure */
-						printedchar += opts[j].p(arg);
+						printedchar += opts[j].f(arg);
+						on = 1;
 						i++;
 					}
 /* if flag is not on, just print stuff like "hello" */
 					if (on == 0)
 					{
 						putchar2(format[i]);
-						i++;
 						printedchar += 1;
 					}
 				}
 			}
 /* not sure about placing of %% in nest */
-		if (format[i] == '%' && format[i+1] == '%')
+		else if (format[i] == '%' && format[i+1] == '%')
 		{
 			putchar2('%');
 			i++;
 			printedchar += 1;
 		}
-		putchar2(format[i]);
-		printedchar += 1;
+		else
+		{
+			putchar2(format[i]);
+			printedchar += 1;
+		}
+		i++;
 
 	}
-	i++;
+
 	return (printedchar);
 }
