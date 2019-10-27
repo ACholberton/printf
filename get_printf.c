@@ -32,3 +32,37 @@ int print_string(va_list arg)
 	}
 	return(i);
 }
+
+int print_int(va_list arg)
+{
+	int i, num;
+	char LD;
+	long rev;
+
+	va_arg(arg, int);
+
+	if (num < 0)
+	{
+		putchar2('-');
+		LD = (char)('0'- (num % 10));
+		num /= -10;
+	}
+	else
+	{
+		LD = (char)((num % 10) + '0');
+	}
+	while (num > 0)
+	{
+		rev = rev * 10 + (num % 10);
+		num /= 10;
+	}
+
+	while (rev > 0)
+	{
+		char c = (char)((rev % 10) + '0');
+		putchar2(c);
+		rev /= 10;
+	}
+	putchar(LD);
+	return (1);
+}
