@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 {
 	va_list arg;
 	int i, j = 0;
-	char printedchar = 0;
+	int printedchar = 0;
 	int on = 0;
 
 	print_t opts[] = {
