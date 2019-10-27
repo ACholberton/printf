@@ -35,7 +35,7 @@ int print_string(va_list arg)
 
 int print_int(va_list arg)
 {
-	int i, num;
+	int num = 0;
 	char LD;
 	long rev;
 
