@@ -13,6 +13,7 @@ int print_percent(va_list arg);
 int print_int(va_list arg);
 int print_dec(va_list arg);
 
+void print_i(int i);
 typedef struct options
 {
 	char *p;
