@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 				j = 0;
 				while (opts[j].f != NULL)
 				{
-					if (format[i+1] == opts[j].p[j])
+					if (format[i+1] == opts[j].p[0])
 					{
 						printedchar += opts[j].f(arg);
 						on = 1;
