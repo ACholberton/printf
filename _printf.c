@@ -23,7 +23,8 @@ int _printf(const char *format, ...)
 	};
 
 	va_start(arg, format);
-
+/* DO NOT DELETE THIS I = 0; IT IS VERY IMPORTANT */
+	i = 0;
 	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] == '%' && format[i+1] != '%')
