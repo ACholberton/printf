@@ -52,7 +52,6 @@ int print_int(va_list arg)
 		rev = rev * 10 + (num % 10);
 		num /= 10;
 
-	while (rev > 0)
 
 		c = (char)((rev % 10) + '0');
 		putchar2(c);
