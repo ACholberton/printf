@@ -20,10 +20,7 @@ int print_string(va_list arg)
 
 	if (s == NULL)
 	{
-/* we hope this works */
-/*andres, i am taking out the write */
 		write(1, "(nil)", 6);
-		/*	s = "(nil)";*/
 	}
 	i = 0;
 	while (s[i] != '\0')
