@@ -33,30 +33,31 @@ int print_string(va_list arg)
 
 int print_int(va_list arg)
 {
-	int num = va_arg(arg, int);;
-	char LD;
-	long rev;
-	char c;
-	rev = 0;
+	int len = 1;
+	int base = 10;
+	int n = va_arg(arg, int);
+	int temp, i = 0;
 
-	va_arg(arg, int);
-
-	if (num < 0)
+	if (n < 0)
 	{
-		putchar2('-');
-		num = -num;
+		putchar('-');
+		n = -n;
 	}
-	if (num > 0)
+	if (n > 0)
 	{
-		LD = (char)((num % 10) + '0');
-		rev = rev * 10 + (num % 10);
-		num /= 10;
-
-
-		c = (char)((rev % 10) + '0');
-		putchar2(c);
-		rev /= 10;
+		while (n/base != 0)
+		{
+			base = base*10;
+			len++;
+		}
+		for(i = 0; i < len; i++)
+		{
+			temp = 0;
+			temp = n/10^(len - 1 - i);
+			temp = temp % 10;
+			putchar(temp + '0');
+		}
 	}
-	putchar(LD);
-	return (num);
+	return(len);
+
 }
