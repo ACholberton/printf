@@ -18,6 +18,7 @@ int _printf(const char *format, ...)
 	print_t opts[] = {
 		{"c", print_char},
 		{"s", print_string},
+		{"i", print_int},
 		{NULL, NULL}
 	};
 
