@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <unistd.h>
 
 int print_char(va_list arg)
 {
@@ -21,9 +22,8 @@ int print_string(va_list arg)
 	{
 /* we hope this works */
 /*andres, i am taking out the write */
-/*		write(1, "(nil)", 5);   */
+		write(1, "(nil)", 6);
 		/*	s = "(nil)";*/
-		puts("(nil)");
 	}
 	i = 0;
 	while (s[i] != '\0')
