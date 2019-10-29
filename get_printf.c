@@ -34,35 +34,32 @@ int print_string(va_list arg)
 int print_int(va_list arg)
 {
 	int len = 1;
-	int base = 10;
 	int n = va_arg(arg, int);
-	int temp, j, i = 0;
+	int temp;
+	int place;
 
 	if (n < 0)
 	{
 		putchar2('-');
 		n = -n;
 	}
-	if (n > 0)
+	temp = n;
+	place = 0;
+	while (temp > 0)
 	{
-		while (n/base != 0)
-		{
-			base = base*10;
-			len++;
-		}
-		for(i = 0; i < len; i++)
-		{
-			temp = 0;
-			for (j = 0; j < len; j++)
-			{
-				j = j * temp;
-			}
-			temp = n/10;
-			(len - i - 1);
-			temp = temp % 10;
-			putchar2(temp + '0');
-		}
+		temp = temp/ 10;
+		place++;
+	}
+	len = 1;
+	while (place > 1)
+	{
+		len = len *10;
+		place--;
+	}
+	while (len > 0)
+	{
+		putchar2(n/len % 10 + '0');
+		len = len/ 10;
 	}
 	return(len);
-
 }
