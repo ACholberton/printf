@@ -11,7 +11,10 @@
 int print_char(va_list arg)
 {
 	char c;
-
+	if (arg == NULL)
+	{
+		return (-1);
+	}
 	c = va_arg(arg, int);
 
 	putchar2(c);
@@ -27,6 +30,10 @@ int print_string(va_list arg)
 	int i = 0;
 	char *s;
 
+	if (arg == NULL)
+	{
+		return (-1);
+	}
 	s = va_arg(arg, char *);
 
 	if (s == NULL)
