@@ -36,7 +36,7 @@ int print_int(va_list arg)
 	int len = 1;
 	int base = 10;
 	int n = va_arg(arg, int);
-	int temp, i = 0;
+	int temp, j, i = 0;
 
 	if (n < 0)
 	{
@@ -53,7 +53,12 @@ int print_int(va_list arg)
 		for(i = 0; i < len; i++)
 		{
 			temp = 0;
-			temp = n/10^(len - 1 - i);
+			for (j = 0; j < len; j++)
+			{
+				j = j * temp;
+			}
+			temp = n/10;
+			(len - i - 1);
 			temp = temp % 10;
 			putchar2(temp + '0');
 		}
