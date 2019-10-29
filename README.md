@@ -39,8 +39,18 @@ int main (void)
 	_printf("Welcome to our project.\n");
 
 return (0);
-} ```
+}```
 
+---
+## Available Format Specifiers
+
+| Format Specifiers |
+| ------------- |:-------------:| -----:|
+| %c      | a single character |
+| %s      | a string |
+| %i  | an integer |
+| %d | a decimal integer |
+| %u | an unsigned integer |
 
 ---
 
