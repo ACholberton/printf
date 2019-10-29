@@ -60,18 +60,20 @@ int print_int(va_list arg)
 	int temp;
 	int place;
 	int count = 0;
+	unsigned int a;
 
 	if (n < 0)
 	{
 		putchar2('-');
-		n = -n;
+		a = -n;
 		count++;
 	}
 	else
 	{
-		n = n;
+		a = n;
+		count++;
 	}
-	temp = n;
+	temp = a;
 	place = 0;
 	while (temp > 0)
 	{
@@ -84,9 +86,10 @@ int print_int(va_list arg)
 		len = len *10;
 		place--;
 	}
+
 	while (len > 0)
 	{
-		putchar2(n/len % 10 + '0');
+		putchar2(a/len % 10 + '0');
 		count++;
 		len = len/ 10;
 	}
