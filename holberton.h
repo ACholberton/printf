@@ -14,6 +14,11 @@ int print_int(va_list arg);
 int print_dec(va_list arg);
 
 void print_i(int i);
+/**
+ *struct options - are the options that printf will take
+ *@p: argument
+ *@f: argument
+ */
 typedef struct options
 {
 	char *p;
