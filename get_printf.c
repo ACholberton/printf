@@ -62,7 +62,6 @@ int print_int(va_list arg)
 	place = 0;
 	while (temp > 0)
 	{
-<<<<<<< HEAD
 		temp = temp/ 10;
 		place++;
 	}
@@ -78,26 +77,4 @@ int print_int(va_list arg)
 		len = len/ 10;
 	}
 	return(len);
-=======
-		while (n / base != 0)
-		{
-			base = base * 10;
-			len++;
-		}
-		for (i = 0; i < len; i++)
-		{
-			temp = 0;
-			for (j = 0; j < len; j++)
-			{
-				j = j * temp;
-			}
-			temp = n / 10;
-			(len - i - 1);
-			temp = temp % 10;
-			putchar2(temp + '0');
-		}
-	}
-	return (len);
-
->>>>>>> 035bfdda96948527e084e71861c196c71b198df6
 }
