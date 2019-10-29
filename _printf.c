@@ -28,29 +28,28 @@ int _printf(const char *format, ...)
 	i = 0;
 	while (format != NULL && format[i] != '\0')
 	{
-		if (format[i] == '%' && format[i+1] != '%')
+		if (format[i] == '%' && format[i + 1] != '%')
 			{
 				j = 0;
 
 				while (opts[j].f != NULL)
 				{
-					if (format[i+1] == opts[j].p[0])
+					if (format[i + 1] == opts[j].p[0])
 					{
 						printedchar += opts[j].f(arg);
 							on = 1;
 						i++;
 					}
-		     		       	j++;
+					j++;
 
 				}
 				if (on == 0)
 					{
 						putchar2(format[i]);
 						printedchar += 1;
-						}
-				
+					}
 			}
-		else if (format[i] == '%' && format[i+1] == '%')
+		else if (format[i] == '%' && format[i + 1] == '%')
 		{
 			putchar2('%');
 			i++;
