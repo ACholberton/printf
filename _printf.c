@@ -22,6 +22,11 @@ int _printf(const char *format, ...)
 		{"d", print_int},
 		{NULL, NULL}
 	};
+	if (format == NULL)
+	{
+		va_end(arg);
+		return(-1);
+	}
 
 	va_start(arg, format);
 /* DO NOT DELETE THIS I = 0; IT IS VERY IMPORTANT */
