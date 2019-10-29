@@ -40,7 +40,7 @@ int print_int(va_list arg)
 
 	if (n < 0)
 	{
-		putchar('-');
+		putchar2('-');
 		n = -n;
 	}
 	if (n > 0)
@@ -55,7 +55,7 @@ int print_int(va_list arg)
 			temp = 0;
 			temp = n/10^(len - 1 - i);
 			temp = temp % 10;
-			putchar(temp + '0');
+			putchar2(temp + '0');
 		}
 	}
 	return(len);

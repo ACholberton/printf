@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 		{"c", print_char},
 		{"s", print_string},
 		{"i", print_int},
-/*	*	{"d", print_dec},*/
+		{"d", print_int},
 		{NULL, NULL}
 	};
 
@@ -31,21 +31,24 @@ int _printf(const char *format, ...)
 		if (format[i] == '%' && format[i+1] != '%')
 			{
 				j = 0;
+
 				while (opts[j].f != NULL)
 				{
 					if (format[i+1] == opts[j].p[0])
 					{
 						printedchar += opts[j].f(arg);
-						on = 1;
+							on = 1;
 						i++;
 					}
-					j++;
+		     		       	j++;
+
 				}
 				if (on == 0)
 					{
 						putchar2(format[i]);
 						printedchar += 1;
-					}
+						}
+				
 			}
 		else if (format[i] == '%' && format[i+1] == '%')
 		{
@@ -57,6 +60,7 @@ int _printf(const char *format, ...)
 		{
 			putchar2(format[i]);
 			printedchar += 1;
+			/*		putchar2('*'); */
 		}
 		i++;
 	}
