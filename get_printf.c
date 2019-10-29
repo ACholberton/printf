@@ -76,5 +76,5 @@ int print_int(va_list arg)
 		putchar2(n/len % 10 + '0');
 		len = len/ 10;
 	}
-	return(len);
+	return(place);
 }
