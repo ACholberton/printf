@@ -46,7 +46,7 @@ return (0);
 ## Available Format Specifiers
 
 
-| Format Specifiers |
+| Format Specifiers | Description |
 --- | --- |
 %c | a single character
 %s | a string
