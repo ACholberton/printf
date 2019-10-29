@@ -33,7 +33,7 @@ header
 file.
 
 Example ```main.c```:
-```#include holberton.h
+```
 int main (void)
 {
 	_printf("Welcome to our project.\n");
