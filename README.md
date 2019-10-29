@@ -45,15 +45,14 @@ return (0);
 ---
 ## Available Format Specifiers
 
-| Format Specifiers                      |
-| :---------------: |:------------------:|
-| %c                | a single character |
-| %s                | a string           |
-| %i                | an integer         |
-| %d                | a decimal integer  |
-| %u                | an unsigned integer|
-| %%                | the % symbol       |
-
+| Format Specifiers |
+--- | --- |
+%c | a single character
+%s | a string
+%i | an integer
+%d | a decimal integer
+%u | an unsigned integer
+%% | a percent character
 ---
 
 ## Author
