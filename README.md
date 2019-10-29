@@ -20,8 +20,7 @@ be translated into characters.
 ## Requirements:
 
 * Create your own header file named
-``` holnerton.h ```
-.
+``` holnerton.h ```.
 * Specific compilation flag: gcc -Wall -Werror -Wextra -pedantic *.c
 * Authorized functions and macros: { write, malloc, free, va_start, va_end, va_copy, va_arg }
 
@@ -32,6 +31,15 @@ be translated into characters.
 header
 ```holberton.h```
 file.
+
+Example ```main.c```:
+```#include holberton.h
+int main (void)
+{
+	_printf("Welcome to our project.\n");
+
+return (0);
+} ```
 
 
 ---
