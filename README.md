@@ -18,5 +18,4 @@ Requirements:
 ## Author
 
 * **Andres Cheung** - [ACholberton](https://github.com/ACholberton)
-* **Christine Pang** - [christinepang1](https://github.com/christi\
-    nepang1)
+* **Christine Pang** - [christinepang1](https://github.com/christinepang1)
