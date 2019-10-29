@@ -39,7 +39,8 @@ int main (void)
 	_printf("Welcome to our project.\n");
 
 return (0);
-}```
+}
+```
 
 ---
 ## Available Format Specifiers
