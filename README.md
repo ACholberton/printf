@@ -45,6 +45,7 @@ return (0);
 ---
 ## Available Format Specifiers
 
+
 | Format Specifiers |
 --- | --- |
 %c | a single character
@@ -53,6 +54,7 @@ return (0);
 %d | a decimal integer
 %u | an unsigned integer
 %% | a percent character
+
 ---
 
 ## Author
