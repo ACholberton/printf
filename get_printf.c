@@ -67,7 +67,10 @@ int print_int(va_list arg)
 		n = -n;
 		count++;
 	}
-
+	else
+	{
+		n = n;
+	}
 	temp = n;
 	place = 0;
 	while (temp > 0)
