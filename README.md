@@ -1,17 +1,38 @@
-# Printf Project
+# _printf Project
 
 ## Description
 
-* Write your own printf function
+* Write your own printf function called _printf
 * This function should produce an output according to format specifiers
 * Incorporate variadic functions with structures
 
+## What printf does
+
+* Prints anything that is passed to this function
+* Depending on which format specifiers are used, the function will print the \
+value of the variable
+* Format specifiers start with the '%' character; the format specifier indicates \
+where along with how s piece of data will \
+be translated into characters.
+
 ---
 
-Requirements:
+## Requirements:
 
+* Create your own header file named
+``` holnerton.h ```
+.
 * Specific compilation flag: gcc -Wall -Werror -Wextra -pedantic *.c
-* authorized functions and macros: { write, malloc, free, va_start, va_end, va_copy, va_arg }
+* Authorized functions and macros: { write, malloc, free, va_start, va_end, va_copy, va_arg }
+
+---
+## Uses
+
+* Compile all created source code .c files in this repository along with the
+header
+```holberton.h```
+file.
+
 
 ---
 
