@@ -4,7 +4,7 @@
 
 * Write your own printf function called _printf
 * This function should produce an output according to format specifiers
-* Incorporate variadic functions with structures
+* This output will be displayed on the standard output
 
 ## What printf does
 
@@ -38,8 +38,14 @@ int main (void)
 {
 	_printf("Welcome to our project.\n");
 
-return (0);
+	return (0);
 }
+```
+Output:
+```
+$
+$ Welcome to our project.
+$
 ```
 
 ---
@@ -55,6 +61,108 @@ return (0);
 %u | an unsigned integer
 %% | a percent character
 
+---
+```%c```:
+```
+int main (void)
+{
+	char c = A;
+	_printf("%c\n", c);
+
+	return (0);
+}
+```
+Output:
+```
+$
+$ A
+$
+```
+---
+
+```%s```
+```
+int main (void)
+{
+	_printf("%s\n", Smile!);
+
+	return (0);
+}
+```
+Output:
+```
+$
+$ Smile!
+$
+```
+---
+
+```%i```:
+```
+int main (void)
+{
+	_printf("%i\n", 23);
+
+	return (0);
+}
+```
+Output:
+```
+$
+$ 23
+$
+```
+
+---
+
+```%d```:
+```
+int main (void)
+{
+	_printf("%d\n", 2.3);
+
+	return (0);
+}
+```
+Output:
+```
+$
+$ 2.3
+$
+```
+___
+
+```%u```:
+```
+int main (void)
+{
+	_printf("%u\n", 7235);
+
+	return (0);
+}
+```
+Output:
+```
+$
+$ 7235
+$
+```
+---
+```%%```:
+```
+int main (void)
+{
+	_printf("%%\n");
+
+	return (0);
+}
+```
+Output:
+```
+$
+$ %%
+$
+```
 ---
 
 ## Author
