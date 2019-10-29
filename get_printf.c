@@ -42,6 +42,22 @@ int print_string(va_list arg)
 	return (i);
 }
 /**
+ *countdigit - will coun the number of digits
+ *@n: is the number of digits to be counted
+ *Return: the number of digit counted
+ */
+/* int countdigit(long long n)
+{
+	int count = 0;
+	while (n != 0)
+	{
+		n = n / 10;
+		count++;
+	}
+	return (count);
+	} */
+
+/**
  *print_int - will print an integer and decimal
  *@arg: is the imput
 *Return: 0
@@ -52,12 +68,14 @@ int print_int(va_list arg)
 	int n = va_arg(arg, int);
 	int temp;
 	int place;
-
+	int count = 0;
 	if (n < 0)
 	{
 		putchar2('-');
 		n = -n;
+		count++;
 	}
+
 	temp = n;
 	place = 0;
 	while (temp > 0)
@@ -74,7 +92,8 @@ int print_int(va_list arg)
 	while (len > 0)
 	{
 		putchar2(n/len % 10 + '0');
+		count++;
 		len = len/ 10;
 	}
-	return(place);
+	return(count);
 }
