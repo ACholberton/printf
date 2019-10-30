@@ -7,11 +7,11 @@
  *@c:is a string
  *Return: string
  */
-char *print_rot13(va_list arg)
+int print_rot13(va_list arg)
 {
 	char rot1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabdcefghijklm";
-	int a, b;
+	int a, b, counter = 0;
 	char *str = va_arg(arg, char*);
 	int length = 1;
 
@@ -22,9 +22,10 @@ char *print_rot13(va_list arg)
 			if (str[a] == rot1[b])
 			{
 				str[a] = rot2[b];
+				counter++;
 				break;
 			}
 		}
 	}
-	return(str);
+	return(counter);
 }
