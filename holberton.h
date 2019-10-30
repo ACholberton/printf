@@ -13,7 +13,7 @@ int print_percent(va_list arg);
 int print_int(va_list arg);
 int print_dec(va_list arg);
 int print_rev(va_list arg);
-char *rot13(char *c);
+char print_rot13(char *c);
 void print_i(int i);
 void printrev_help(char *s);
 

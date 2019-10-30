@@ -4,9 +4,10 @@
  *@c:is a string
  *Return: string
  */
-char *rot13(char *c)
+char *print_rot13(va_list arg)
 {
 	int a, b;
+	char c = va_arg(arg, char);
 	char alpha[2][26] = {{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
 			      'k', 'l', 'm', 'A', 'B', 'C', 'D', 'E', 'F', 'G',
 			      'H', 'I', 'J', 'K', 'L', 'M'},
@@ -14,6 +15,10 @@ char *rot13(char *c)
 			      'x', 'y', 'z', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
 			      'U', 'V', 'W', 'X', 'Y', 'Z'}};
 
+	if (c == NULL)
+	{
+		return (NULL);
+	}
 	for (a = 0; *(c + a) != '\0'; a++)
 	{
 		for (b = 0; b < 2; b++)

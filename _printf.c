@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 		{"i", print_int},
 		{"d", print_int},
 		{"r", print_rev},
-		{"r13", rot13},
+		{"r13", print_rot13},
 		{NULL, NULL}
 	};
 
