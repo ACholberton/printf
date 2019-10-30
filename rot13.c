@@ -26,6 +26,7 @@ int print_rot13(va_list arg)
 			if (str[a] == rot1[b])
 			{
 				str[a] = rot2[b];
+				putchar2(rot2[b]);
 				counter++;
 				break;
 			}
