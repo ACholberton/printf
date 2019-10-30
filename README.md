@@ -60,6 +60,7 @@ $
 %d | a decimal integer
 %u | an unsigned integer
 %% | a percent character
+%r | prints a string in reverse
 
 ---
 ```%c```:
@@ -163,6 +164,23 @@ $
 $ %%
 $
 ```
+---
+```%r```:
+```
+int main (void)
+{
+	_printf("%r\n", \nHello);
+
+	return (0);
+}
+```
+Output:
+```
+$
+$ olleH
+$
+```
+
 ---
 
 ## Author
