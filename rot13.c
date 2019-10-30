@@ -3,8 +3,8 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- *rot13 - this function will encode a string using rot 13
- *@c:is a string
+ *print_rot13 - this function will encode a string using rot 13
+ *@arg: the argument taken
  *Return: string
  */
 int print_rot13(va_list arg)
@@ -15,6 +15,10 @@ int print_rot13(va_list arg)
 	char *str = va_arg(arg, char*);
 	int length = 1;
 
+	if (str == NULL)
+	{
+		return (-1);
+	}
 	for (a = 0; a < length; a++)
 	{
 		for (b = 0; rot1[b]; b++)
@@ -27,5 +31,5 @@ int print_rot13(va_list arg)
 			}
 		}
 	}
-	return(counter);
+	return (counter);
 }
