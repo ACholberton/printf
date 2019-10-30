@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		{"s", print_string},
 		{"i", print_int},
 		{"d", print_int},
+		{"r", print_rev},
 		{NULL, NULL}
 	};
 
